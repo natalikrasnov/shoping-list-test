@@ -8,7 +8,7 @@ export async function getAllProducts() {
     return response.data;
   } catch (error) {
     console.error("error on get from server:", error);
-    return null;
+    return [];
   }
 }
 
@@ -29,6 +29,6 @@ export async function getAllCategories() {
     return categories.data;
   } catch (error) {
     console.error("error on get categories from server:", error);
-    return null;
+    return ["מוצרי נקיון", "גבינות", "ירקות ופירות", "בשר ודגים", "מאפים"];
   }
 }
