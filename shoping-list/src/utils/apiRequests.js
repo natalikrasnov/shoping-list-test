@@ -13,7 +13,6 @@ export async function getAllProducts() {
 }
 
 export async function addNewProduct(product) {
-  console.log("add new producct to server");
   try {
     const response = await axios.post(baseUrl + "/products/new", product);
     return response.data;
@@ -29,6 +28,7 @@ export async function getAllCategories() {
     return categories.data;
   } catch (error) {
     console.error("error on get categories from server:", error);
+    //for production=> on production server is down
     return ["מוצרי נקיון", "גבינות", "ירקות ופירות", "בשר ודגים", "מאפים"];
   }
 }

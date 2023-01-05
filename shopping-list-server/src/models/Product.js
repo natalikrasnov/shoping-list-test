@@ -15,6 +15,7 @@ const productSchema = new mongoose.Schema({
   count: {
     type: Number,
     defaultValue: 1,
+    min: 1,
   },
 });
 

@@ -24,16 +24,19 @@ export const AddNewItem = ({ }) => {
     }
 
     const addNewItem = async () => {
+        if (!productInput || selectedCategory) {
+            setErrorMessage(strings.invalidProductInputMessage)
+            return
+        }
         const newProduct = {
             product: productInput,
             category: selectedCategory
         }
         try {
-            productsDispatch(addNewProductAction(newProduct))
             await addNewProduct(newProduct)
+            productsDispatch(addNewProductAction(newProduct))
         } catch (error) {
             setErrorMessage(error.toString())
-
         }
     }
 

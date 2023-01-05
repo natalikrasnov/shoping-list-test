@@ -7,5 +7,6 @@
     "category":"קטגוריה",
     "addProducts_message": "יש לאסוף מוצרים אלו במחלקות המתאימות",
     "error": "שגיאה",
-    "close": "סגור"
+    "close": "סגור",
+    "invalidProductInputMessage": "אנא הוסיפו שם מוצר ו/או קטגוריה"
 }
