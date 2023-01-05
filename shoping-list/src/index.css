@@ -3,6 +3,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  direction: rtl;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,6 +14,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+#root {
+  text-align: center;
+ overflow: hidden;
 }
 
 a {
@@ -26,10 +31,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  
 }
 
 h1 {

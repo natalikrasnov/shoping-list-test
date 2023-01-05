@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+.fade{
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+@mixin mobileScreen {
+    @media (max-width: 600px) {
+        @content;
+    }
+
+}

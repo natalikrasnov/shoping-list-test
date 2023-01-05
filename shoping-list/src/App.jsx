@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "../node_modules/bootstrap/scss/bootstrap.scss"
+import './styles/_main.style.scss'
+
+import { Header } from "./components/header.component"
+import { ShoppingList } from "./pages/shopping-list.component"
+import ShoppingListContextProvider from "./hooks/context/shoppingList.context"
+
+import strings from './utils/strings.json'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  //If we had more than one page then the title would come from the router data
+  const headerTitle = strings["shoppingList_title"]
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <>
+      <Header title={headerTitle} />
+      <ShoppingListContextProvider>
+        <ShoppingList />
+      </ShoppingListContextProvider>
+    </>
   )
 }
 

@@ -1,10 +1,10 @@
 # shopping-list-test
 
-shoping list test.
+shopping list test.
 
 #
-## client
 
+## client
 
 ### Installation
 
@@ -13,12 +13,12 @@ cd shoping-list
 npm install
 npm run dev
 ```
+
 #
+
 ## server
 
-
 ### Installation
-
 
 ```bash
 cd shopping-list-server
@@ -27,5 +27,5 @@ npm run start
 ```
 
 #
-created by Natali Krasnov
 
+created by Natali Krasnov

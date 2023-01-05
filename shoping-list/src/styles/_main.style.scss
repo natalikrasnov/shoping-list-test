@@ -1,0 +1,10 @@
+//
+@use './base.style';
+
+//components
+@use './components/header.style';
+@use './components/_shoping-list.style.scss/add-new-item.style';
+@use './components/_shoping-list.style.scss/list.style';
+
+//pages
+@use './pages/shopping-list.style';

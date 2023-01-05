@@ -1,0 +1,64 @@
+@use '../../base.style';
+
+.add-new-product{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
+
+    @include base.mobileScreen{
+        flex-direction: column;
+    }
+
+    input{
+        text-align: center;
+    }
+
+    .dropdown{
+        min-width: 200px;
+
+        button{
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn{
+            color: gray;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 2fr 6px;
+            align-items: center;
+            border-radius: 0;
+        }
+
+        .dropdown-menu{
+            width: 100%;
+
+            li{
+                color: gray;
+                border-bottom: 1px solid gray;
+
+                &:last-child{
+                    border: none;
+                }
+            }
+
+            .active,
+            button:active{
+                background-color: white;
+                color: black;
+                border: 2px solid gray;
+                border-radius: 0;
+            }
+        }
+    }
+
+    .add-button{
+        background-color: lightblue;
+        border: 2px solid rgb(35, 179, 227);
+        padding: 0 1rem;
+        border-radius: 30px;
+    }
+
+}
