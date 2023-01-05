@@ -3,13 +3,13 @@ import { ShoppingListContext } from "../../hooks/context/shoppingList.context"
 import { addNewProductAction } from "../../hooks/actions/shoppingList.actions"
 import { addNewProduct, getAllCategories } from "../../utils/apiRequests"
 import strings from "../../utils/strings.json"
-import { ErrorAlert } from "../errorAlert.component"
-import { DropDown } from "../dropdown.component"
+import { ErrorAlert } from "../utils/errorAlert.component"
+import { DropDown } from "../utils/dropdown.component"
 
 export const AddNewItem = ({ }) => {
     const { productsDispatch } = useContext(ShoppingListContext)
 
-    const [categories, setCategories] = useState(null)
+    const [categories, setCategories] = useState([])
     const [selectedCategory, setSelectedCategory] = useState(null)
     const [productInput, setProductInput] = useState("")
     const [errorMessage, setErrorMessage] = useState(null)

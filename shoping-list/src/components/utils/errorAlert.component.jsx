@@ -1,4 +1,4 @@
-import strings from "../utils/strings.json";
+import strings from "../../utils/strings.json";
 
 export const ErrorAlert = ({ message, isShow, closeAlert }) => {
 

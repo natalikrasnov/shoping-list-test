@@ -6,6 +6,6 @@ export const CountProducts = () => {
     const { countProducts } = useContext(ShoppingListContext)
 
     return (
-        <label>{strings.sum}: {countProducts} {strings.products}</label>
+        <label className="count_product">{strings.sum}: {countProducts} {strings.products}</label>
     )
 }

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ShoppingListContext } from "../../hooks/context/shoppingList.context";
 import strings from '../../utils/strings.json'
-import { List } from "../list.components";
+import { List } from "../utils/list.components";
 
 export const ShoppingListList = ({ }) => {
 
@@ -28,7 +28,7 @@ export const ShoppingListList = ({ }) => {
                 {getProductsByCategories &&
                     Object.keys(getProductsByCategories).map(key => (
                         <div className="list" key={key}>
-                            <h5>{key}</h5>
+                            <h5>{key} - {getProductsByCategories[key].length} {strings.products}</h5>
                             <List
                                 data={getProductsByCategories[key]}
                                 displayDataElementKey={displayDataElementKey}

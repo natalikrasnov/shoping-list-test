@@ -6,7 +6,7 @@ export const ShoppingListContext = createContext()
 const ShoppingListContextProvider = (props) => {
     const [products, productsDispatch] = useReducer(ProductsReducer, productsInitialState)
 
-    const countProducts = products.reduce((prevValue, currValue) => {
+    const countProducts = products && products.reduce((prevValue, currValue) => {
         return prevValue + (currValue.count || 1)
     }, 0)
 

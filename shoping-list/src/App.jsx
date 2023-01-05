@@ -1,7 +1,7 @@
 import "../node_modules/bootstrap/scss/bootstrap.scss"
 import './styles/_main.style.scss'
 
-import { Header } from "./components/header.component"
+import { Header } from "./components/utils/header.component"
 import { ShoppingList } from "./pages/shopping-list.component"
 import ShoppingListContextProvider from "./hooks/context/shoppingList.context"
 
